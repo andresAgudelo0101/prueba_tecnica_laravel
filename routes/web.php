@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\TiendaController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//index route
 Route::get('/', function () {
     return view('welcome');
 });
 
+//tienda routes
 Route::get('tienda/registrar',[TiendaController::class, 'create'])->name('tienda.create');
 
 Route::post('tienda/guardar',[TiendaController::class,'store'])->name('tienda.store');
 
 Route::get('tienda/listar',[TiendaController::class,'index'])->name('tienda.index');
+
+//producto routes
+
+Route::get('producto/registrar',[ProductoController::class, 'create'])->name('producto.create');
+
+Route::post('producto/guardar',[ProductoController::class,'store'])->name('producto.store');
+
+Route::get('producto/listar',[ProductoController::class,'index'])->name('producto.index');

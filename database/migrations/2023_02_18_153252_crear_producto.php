@@ -26,6 +26,8 @@ return new class extends Migration
                 ->on("tienda")
                 ->onDelete("cascade")
                 ->onUpdate("cascade");
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 
