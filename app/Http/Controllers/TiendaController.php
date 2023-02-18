@@ -15,7 +15,8 @@ class TiendaController extends Controller
      */
     public function index()
     {
-        //
+        $tiendas = tienda::orderByDesc('id')->get();
+        return view('tienda.index',compact('tiendas'));
     }
 
     /**
@@ -40,11 +41,12 @@ class TiendaController extends Controller
         $datos = $request->validate(
             [
                 'nombre' => 'required',
-                'fecha_apertura' => 'required'
+                'fecha_apertura' => 'required|date_format:Y-m-d'
             ]
         );
-
-        dd($request);
+       
+        $tienda = tienda::create($datos);
+        return redirect()->route('tienda.index');
     }
 
     /**

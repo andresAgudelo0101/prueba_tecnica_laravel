@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nombre',50);
             $table->timestamp('fecha_apertura');
+            $table->softDeletes();
+            $table->timestamps();
         });
     }
 

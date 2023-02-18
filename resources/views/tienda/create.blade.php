@@ -7,12 +7,14 @@
     <form action="{{ route('tienda.store') }}" method="POST">
         @csrf
         <label>Nombre</label>
-        <input type="text" name="nombre" placeholder="Nombre"/>
+        <input type="text" name="nombre"  value="{{ old('nombre') }}" placeholder="Nombre"/>
         <label>Fecha Apertura</label>
         <input 
-        type="date"  
-        min="30-01-1910" 
-        name="fecha_apertura" />
+            type="date"  
+            placeholder="dd-mm-aaaa"
+            name="fecha_apertura" 
+            value="{{ old('fecha_apertura') }}"
+        />
         <button type="submit">Guardar</button>
     </form>
 @endsection

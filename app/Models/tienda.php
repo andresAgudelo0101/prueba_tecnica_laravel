@@ -17,4 +17,8 @@ class tienda extends Model
         'fecha_apertura'
     ];
     protected $dates = ['fecha_apertura'];
+
+    public function getFecha(){
+        return $this->fecha_apertura;
+    }
 }

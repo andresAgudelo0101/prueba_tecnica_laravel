@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('tienda/registrar',[TiendaController::class, 'create'])->name('tienda.create');
 
 Route::post('tienda/guardar',[TiendaController::class,'store'])->name('tienda.store');
+
+Route::get('tienda/listar',[TiendaController::class,'index'])->name('tienda.index');
