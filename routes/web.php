@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\TiendaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('tienda/registrar',[TiendaController::class, 'create'])->name('tienda.create');
+
+Route::post('tienda/guardar',[TiendaController::class,'store'])->name('tienda.store');
