@@ -6,7 +6,8 @@
 @section('contenido')
     <div class="contenedor container-form">
         <h1 class="titulo">Editar Producto</h1>
-        <form action="{{ route('producto.update', $producto) }}" method="POST" enctype="multipart/form-data" class="form-producto">
+        <form action="{{ route('producto.update', $producto) }}" method="POST" enctype="multipart/form-data"
+            class="form-producto">
             @method('PUT')
             @csrf
             <div>
@@ -16,7 +17,7 @@
             </div>
             <div>
                 <label class="form-label label">SKU</label>
-                <input type="text" name="sku" value="{{ old('sku', $producto->sku) }}" placeholder="Sku"
+                <input type="text" name="sku" value="{{ old('sku', 'N' . $producto->sku) }}" placeholder="Sku"
                     class="input-form" />
             </div>
             <div>
@@ -42,6 +43,7 @@
             </div>
             <div>
                 <label class="form-label label">Imagen</label>
+                <input type="text" name="imagen" value="{{ old('imagen', $producto->imagen) }}" hidden>
                 <input type="file" name="imagen" id="file" accept=".jpg,.jpge,.png" class="form-control"
                     value="{{ old('imagen', $producto->nombre) }}">
             </div>

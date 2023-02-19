@@ -19,16 +19,15 @@
             </div>
             <button type="submit" class="btn-save">Guardar</button>
         </form>
-
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
     </div>
+    @if ($errors->any())
+        <div class="contenedor-alerta">
+            <ul class="alert alert-danger alerta">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
 @endsection
