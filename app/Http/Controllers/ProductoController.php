@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\producto;
+use App\Models\tienda;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -13,9 +14,11 @@ class ProductoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        $cont=0;
+        $tiendas = tienda::orderByDesc('id')->get();
         $productos = producto::orderByDesc('id')->get();
-        return view('producto.index',compact('productos'));
+        return view('producto.index',compact(['productos','tiendas','cont']));
     }
 
     /**
@@ -25,7 +28,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view('producto.create');
+        $tiendas = tienda::orderByDesc('id')->get();
+        return view('producto.create',compact('tiendas'));
     }
 
     /**
