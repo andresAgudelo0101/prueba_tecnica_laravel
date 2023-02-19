@@ -5,31 +5,30 @@
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
 }
-
 .menu {
-    color: rgb(218, 216, 216);
-    background-color: #712cf9;
+    height: 10vh;
+    color: #e6e6e69c;
+    background-color: #6658d3;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     box-shadow: rgba(151, 70, 226, 0.061) 0px 10px 36px 0px,
         rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .menu nav li a:hover {
-    color: white;
-}
-
-.tabla {
-    width: 80%;
+    color: #ffffff;
 }
 
 .titulo {
     font-weight: 700;
-    color: rgb(71, 66, 66);
+    color: #3f3649;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .contenedor {
-    min-height: 70vh;
+    min-height: 75vh;
     padding: 10px;
     background-color: #e6e6e69c;
 }
@@ -43,4 +42,5 @@
     align-items: center;
     font-size: 0.9rem;
     font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }

@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //index route
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ProductoController::class,'index'])->name('index');
 
 //tienda routes
 Route::get('tienda/registrar',[TiendaController::class, 'create'])->name('tienda.create');

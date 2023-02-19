@@ -1,0 +1,52 @@
+.btn-watch {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5em;
+    width: 100%;
+    background-color: #4361ee;
+    border-radius: 6px;
+    color: #fff;
+    border: 0;
+    text-decoration: none;
+}
+
+.btn-edit {
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.5em;
+    width: 100%;
+    background-color: #6658d3;
+    border-radius: 6px;
+    color: #fff;
+    border: 0;
+    text-decoration: none;
+}
+
+.btn-watch:hover{
+    opacity: 0.9;
+    color: #fff;
+}
+
+.btn-edit:hover{
+    opacity: 0.9;
+    color: #fff;
+}
+
+.th{
+    color: #6658d3;
+    font-weight: 700;
+    font-size: 0.99rem;
+}
+
+.tabla {
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 6px;
+}
+
+.description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}

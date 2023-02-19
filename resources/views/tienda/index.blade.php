@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 
-@section('titulo', 'Registrar Tienda')
+@section('titulo', 'Lista de Tiendas')
+@section('estilo', asset('css/list.css'))
 
 @section('contenido')
     <div class="contenedor">
@@ -8,8 +9,8 @@
         <div class="d-flex justify-content-center">
             <table class="table tabla">
                 <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Fecha Apertura</th>
+                    <th class="th" scope="col">Nombre</th>
+                    <th class="th" scope="col">Fecha Apertura</th>
                 </tr>
                 <tbody>
                     @foreach ($tiendas as $tienda)

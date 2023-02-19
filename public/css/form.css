@@ -1,0 +1,77 @@
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-tienda{
+    background-color: rgb(255, 255, 255);
+    width: 20vw;
+    padding: 5.5rem 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.form-producto{
+    background-color: #ffffff;
+    width: 20vw;
+    padding: 1.5rem 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.input-form{
+    width: 100%;
+    padding: 0.5rem;
+    border: solid 2px transparent;
+    border-bottom: #6658d3 solid 2px;
+    border-radius: 6px;
+}
+
+.label{
+    color: #6658d3;
+    font-weight: 500;
+}
+
+.input-form:focus{
+    outline: none;
+    border: #6658d3 solid 2px;
+}
+.btn-save{
+    background-color: #6658d3;
+    font-weight: 500;
+    font-size: 1.25rem;
+	padding: 0.5em;
+	width: 100%;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+}
+
+.btn-save:hover{
+    opacity: 0.8;
+}
+
+.t-tarea:focus{
+    outline: none;
+    border: #6658d3 solid 2px;
+    box-shadow: none;
+}
+
+.contenedor-alerta{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerta{
+    padding:0.7rem 2rem;
+}
