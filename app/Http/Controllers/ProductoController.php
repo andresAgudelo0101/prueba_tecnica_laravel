@@ -63,7 +63,7 @@ class ProductoController extends Controller
      */
     public function show(producto $producto)
     {
-        //
+        return view('producto.show',compact('producto'));
     }
 
     /**
@@ -74,7 +74,8 @@ class ProductoController extends Controller
      */
     public function edit(producto $producto)
     {
-        //
+        $tiendas = tienda::orderByDesc('id')->get();
+        return view('producto.edit',compact(['producto','tiendas']));
     }
 
     /**
@@ -86,7 +87,19 @@ class ProductoController extends Controller
      */
     public function update(Request $request, producto $producto)
     {
-        //
+        $datos = $request->validate(
+            [
+                'nombre' => 'required',
+                'sku' => 'required',
+                'descripcion' => 'required|max:130',
+                'valor' => 'required|numeric',
+                'tienda' => 'required',
+                'imagen' => 'required',
+            ]
+        );
+           
+        $producto -> update($datos);
+        return redirect()->route('producto.index');
     }
 
     /**
@@ -97,6 +110,7 @@ class ProductoController extends Controller
      */
     public function destroy(producto $producto)
     {
-        //
+        $producto->delete();
+        return redirect()->route('producto.index');
     }
 }

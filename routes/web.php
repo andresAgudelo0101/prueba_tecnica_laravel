@@ -33,3 +33,11 @@ Route::get('producto/registrar',[ProductoController::class, 'create'])->name('pr
 Route::post('producto/guardar',[ProductoController::class,'store'])->name('producto.store');
 
 Route::get('producto/listar',[ProductoController::class,'index'])->name('producto.index');
+
+Route::get('producto/{producto}/editar',[ProductoController::class,'edit'])->name('producto.edit');
+
+Route::put('producto/{producto}/actualizar',[ProductoController::class,'update'])->name('producto.update');
+
+Route::get('producto/{producto}/detalle',[ProductoController::class, 'show'])->name('producto.show');
+
+Route::delete('producto/{producto}/eliminar',[ProductoController::class, 'destroy'])->name('producto.destroy');
