@@ -19,5 +19,5 @@ Pasos para la correcta ejecución del proyecto
 - Abre xampp y ejecuta apache y MySQL
 - Crea una base de datos de MySQL llamada prueba_tecnica_laravel (si tienes un usuario y contraseña en tu base de datos solo entra al archivo .env y allí modificas estos valores)
 - Abre la terminal en la raíz del proyecto y ejecuta composer install.
-- En la terminal de la raíz del proyecto ejecuta este comando: php artisan migrate 
+- En la terminal ejecuta este comando: php artisan migrate 
 - Por último, en la terminal ejecuta: php artisan serve (con ctrl más clic izquierdo abres el enlace de ejecución del proyecto)
