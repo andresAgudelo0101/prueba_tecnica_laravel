@@ -13,7 +13,6 @@ Pasos para la correcta ejecución del proyecto
 
 - [Instalar xampp](https://www.apachefriends.org/download.html).
 - [Instalar composer](https://getcomposer.org).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Ejecutar comando en terminal para usar de forma global: composer global require laravel/installer.
 - Descarga el proyecto o en tu terminal has un git clone del repositorio.
 - Abre la terminal en la raíz del proyecto y ejecuta composer install.
